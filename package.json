@@ -1,0 +1,25 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./src/server.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./src/server.js",
+    "clean": "rimraf www/ || true",
+    "build": "npm run clean && tsc && cp package.json www/package.json && cd www && zip -r Archive.zip . && cd ..",
+    "dev": "ts-node-dev --respawn --transpile-only ./src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/HoangPhuc4798/uda-aws-dev-proj2"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.1",
+    "express": "^4.18.2",
+    "jimp": "^0.16.2"
+  }
+}
