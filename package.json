@@ -7,7 +7,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
-    "dev": "node server.js"
+    "dev": "node server.js",
+    "clean": "rm -rf www/ || true",
+    "build": "cp package.json www/package.json && mkdir www/tmp/ && cd www && zip -r Archive.zip . && cd .."
   },
   "author": "",
   "license": "ISC",
